@@ -1,0 +1,46 @@
+.container{
+  height: 100px;
+  width: 300px;
+  text-align: center;
+  font-size: 40px;
+  background-color: #2ada71;
+}
+
+.bar{
+  height: 5px;
+  width: 175px;
+  background-color: #767677;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.ratings{
+  font-size: 12px;
+}
+
+.meter5{
+  height: 5px;
+  width: 75%;
+  background-color: #2ada71;
+}
+.meter4{
+  height: 5px;
+  width: 10%;
+  background-color: #2ada71;
+}
+.meter3{
+  height: 5px;
+  width: 5%;
+  background-color: #2ada71;
+}
+.meter2{
+  height: 5px;
+  width: 3%;
+  background-color: #2ada71;
+}
+.meter1{
+  height: 5px;
+  width: 2%;
+  background-color: #2ada71;
+}

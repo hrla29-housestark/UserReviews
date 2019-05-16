@@ -1,0 +1,21 @@
+div{
+  margin-bottom: 15;
+}
+
+span{
+  text-decoration: underline;
+}
+
+.firstLine{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.date{
+  text-align: right;
+}
+
+.title{
+  font-size: 18;
+}
+

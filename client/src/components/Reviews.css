@@ -1,0 +1,34 @@
+.sortBox{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-bottom: 10px;
+}
+
+.relevant{
+  border: solid;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  border-width: 1px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.helpful{
+  border: solid;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  border-width: 1px;
+  grid-row: 1;
+}
+
+.newest{
+  border: solid;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  border-width: 1px;
+  border-bottom-width: 2px;
+  grid-row: 1;
+}
