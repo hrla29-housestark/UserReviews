@@ -8,9 +8,9 @@ class ReviewEntry extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className={style.review}>
         <div className={style.firstLine}>
-          <div>Rating</div>
+          <div>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <div className={style.date}>Date</div>
         </div>
         <div className={style.title}>

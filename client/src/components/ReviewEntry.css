@@ -1,5 +1,6 @@
-div{
-  margin-bottom: 15;
+.review{
+  border-bottom: solid;
+  border-bottom-width: 1px;
 }
 
 span{

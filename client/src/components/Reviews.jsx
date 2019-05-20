@@ -5,16 +5,43 @@ import style from './Reviews.css';
 class Reviews extends React.Component{
   constructor(props){
     super(props);
+    this.state = {
+      view: 'relevant',
+      list: []
+    }
+    this.changeView = this.changeView.bind(this);
   }
 
+  changeView(option){
+    this.setState({
+      view: option
+    })
+  }
+ 
   render(){
+    const { view } = this.state;
     return(
-      <div >
+      <div>
         Sort On
         <div className={style.sortBox}>
-          <div className={style.relevant}>Relevant</div>
-          <div className={style.helpful}>Helpful</div>
-          <div className={style.newest}>Newest</div>
+          <div className={view === 'relevant'
+          ? style.selected
+          : style.unselected}
+          onMouseOver={style.hover}
+          onClick={() => this.changeView('relevant')}
+          >RELEVANT</div>
+          <div className={view === 'helpful'
+          ? style.selected
+          : style.unselected}
+          onMouseOver={style.hover}
+          onClick={() => this.changeView('helpful')}
+          >HELPFUL</div>
+          <div className={view === 'newest'
+          ? style.selected
+          : style.unselected}
+          onMouseOver={style.hover}
+          onClick={() => this.changeView('newest')}
+          >NEWEST</div>
         </div>
         <div>
           <ReviewEntry />

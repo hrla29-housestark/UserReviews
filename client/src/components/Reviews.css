@@ -4,31 +4,26 @@
   margin-bottom: 10px;
 }
 
-.relevant{
+.unselected{
   border: solid;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  text-align: center;
-  border-width: 1px;
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.helpful{
-  border: solid;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   border-width: 1px;
   grid-row: 1;
+  color: grey;
 }
 
-.newest{
+.hover{
+  color: black;
+}
+
+.selected{
   border: solid;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   border-width: 1px;
-  border-bottom-width: 2px;
+  border-bottom-width: 3px;
   grid-row: 1;
 }

@@ -10,24 +10,51 @@ class Totals extends React.Component{
     return(
       <div>
         <div className={style.container}>
-          4.7
+          <div className={style.score}><b>4.7</b></div>
+          <div className={style.stars}>
+            <div className={style.emptyStars}></div>
+            <div className={style.fullStars}></div>
+          </div>
+            <div className={style.numberRatings}>
+              Ratings: 6328
+            </div>
         </div>
-          <div className={style.ratings}>
+        <div className={style.ratings}>
           <h2>RATING BREAKDOWN</h2> <br/>
-          5 Stars<div className={style.bar}>
-            <div className={style.meter5}></div>
-          </div> 
-          4 Stars<div className={style.bar}>
-            <div className={style.meter4}></div>
+          <div className={style.barContainer}>
+            <div>5 STARS</div>
+            <div className={style.bar}>
+              <div className={style.meter5}></div>
+            </div> 
+            <div className={style.starTotals}>1238</div>
           </div>
-          3 Stars<div className={style.bar}>
-            <div className={style.meter3}></div>
+          <div className={style.barContainer}>
+            <div>4 STARS</div>
+            <div className={style.bar}>
+              <div className={style.meter4}></div>
+            </div>
+            <div className={style.starTotals}>900</div>
           </div>
-          2 Stars<div className={style.bar}>
-            <div className={style.meter2}></div>
+          <div className={style.barContainer}>
+            <div>3 STARS</div>
+            <div className={style.bar}>
+              <div className={style.meter3}></div>
+            </div>
+            <div className={style.starTotals}>450</div>
           </div>
-          1 Star<div className={style.bar}>
-            <div className={style.meter1}></div>
+          <div className={style.barContainer}>
+            <div>2 STARS</div>
+            <div className={style.bar}>
+              <div className={style.meter2}></div>
+            </div>
+            <div className={style.starTotals}>97</div>
+          </div>
+          <div className={style.barContainer}>
+            <div>1 STARS</div>
+            <div className={style.bar}>
+              <div className={style.meter1}></div>
+            </div>
+            <div className={style.starTotals}>45</div>
           </div>
         </div>
           <div className={style.recommend}>

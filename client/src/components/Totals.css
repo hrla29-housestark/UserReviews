@@ -1,6 +1,37 @@
+.score{
+  margin: auto;
+}
+
+.stars {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  color: #2ada71;
+  overflow: hidden;
+}
+.fullStars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: black;
+  width: 94%;
+}
+.emptyStars:before, .fullStars:before {
+  content:"\2605\2605\2605\2605\2605";
+  font-size: 14pt;
+}
+.emptyStars:before {
+  -webkit-text-stroke: 1px black;
+}
+.fullStars:before {
+  -webkit-text-stroke: 1px black;
+}
+
 .container{
   height: 100px;
-  width: 300px;
+  width: 100%;
   text-align: center;
   font-size: 40px;
   background-color: #2ada71;
@@ -10,13 +41,17 @@
   height: 5px;
   width: 175px;
   background-color: #767677;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: right;
+  margin: auto;
+  text-align: left;
+}
+
+.barContainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 .ratings{
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .meter5{
@@ -43,4 +78,12 @@
   height: 5px;
   width: 2%;
   background-color: #2ada71;
+}
+
+.numberRatings{
+  font-size: 12px;
+}
+
+.starTotals{
+  text-align: right;
 }
