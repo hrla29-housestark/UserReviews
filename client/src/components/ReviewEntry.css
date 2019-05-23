@@ -10,6 +10,8 @@ span{
 .firstLine{
   display: grid;
   grid-template-columns: 50% 50%;
+  margin-bottom: 14px;
+  margin-top: 40px;
 }
 
 .date{
@@ -18,5 +20,25 @@ span{
 
 .title{
   font-size: 18;
+  margin-bottom: 10px;
 }
 
+.body{
+  margin-bottom: 20px;
+}
+
+.recommend{
+  margin-bottom: 10px;
+}
+
+.user{
+  margin-bottom: 14px;
+}
+
+.helpful{
+  margin-bottom: 40px;
+}
+
+.oneStar{
+  content: '&#9733;&#9734;&#9734;&#9734;&#9734;'
+}

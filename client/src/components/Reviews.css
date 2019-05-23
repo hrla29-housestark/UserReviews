@@ -27,3 +27,27 @@
   border-bottom-width: 3px;
   grid-row: 1;
 }
+
+.bottomContainer{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 10px;
+}
+
+.loadMore{
+  border: solid;
+  border-width: 1px;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.writeReview{
+  border: solid;
+  border-width: 1px;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

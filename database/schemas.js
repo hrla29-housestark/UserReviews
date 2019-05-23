@@ -25,7 +25,10 @@ let reviewSchema = mongoose.Schema({
   notHelpful: Number,
   recommend: Boolean,
   verified: Boolean,
-  adidasResponse: String
+  adidasResponse: String,
+  userName: String,
+  date: String,
+  relevant: Number
 })
 
 let Aggregate = mongoose.model('Aggregate', aggregateSchema);

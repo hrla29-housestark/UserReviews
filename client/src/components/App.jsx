@@ -6,13 +6,23 @@ import Reviews from './Reviews.jsx';
 class App extends React.Component{
   constructor(props){
     super(props);
+    this.state = {
+      filterBy: []
+    }
+    this.getFilters = this.getFilters.bind(this);
+  }
+
+  getFilters(filters){
+    this.setState({
+      filterBy: filters
+    }, () => console.log(this.state.filterBy))
   }
 
   render(){
     return(
       <div className={style.container}>
-       <div className={style.totals}><Totals /></div>
-       <div className={style.reviews}><Reviews /></div>
+       <div className={style.totals}><Totals getFilters={this.getFilters} /></div>
+       <div className={style.reviews}><Reviews filters={this.state.filterBy}/></div>
       </div>
     )
   }

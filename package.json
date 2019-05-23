@@ -35,9 +35,12 @@
     "body-parser": "^1.19.0",
     "express": "^4.16.4",
     "faker": "^4.1.0",
+    "moment": "^2.24.0",
     "mongoose": "^5.5.7",
     "path": "^0.12.7",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "underscore": "^1.9.1",
+    "underscore-query": "^3.3.2"
   }
 }

@@ -38,7 +38,7 @@
 }
 
 .bar{
-  height: 5px;
+  height: 4px;
   width: 175px;
   background-color: #767677;
   margin: auto;
@@ -48,6 +48,8 @@
 .barContainer{
   display: grid;
   grid-template-columns: auto auto auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .ratings{
@@ -55,27 +57,27 @@
 }
 
 .meter5{
-  height: 5px;
+  height: 4px;
   width: 75%;
   background-color: #2ada71;
 }
 .meter4{
-  height: 5px;
+  height: 4px;
   width: 10%;
   background-color: #2ada71;
 }
 .meter3{
-  height: 5px;
+  height: 4px;
   width: 5%;
   background-color: #2ada71;
 }
 .meter2{
-  height: 5px;
+  height: 4px;
   width: 3%;
   background-color: #2ada71;
 }
 .meter1{
-  height: 5px;
+  height: 4px;
   width: 2%;
   background-color: #2ada71;
 }
@@ -86,4 +88,9 @@
 
 .starTotals{
   text-align: right;
+}
+
+.showing{
+  padding: 10px;
+  margin: auto;
 }
