@@ -100,64 +100,144 @@ class Totals extends React.Component{
     const { one, two, three, four, five } = this.state;
     return(
       <div>
+        
+        
+        
         <div className={style.container}>
-          <div className={style.score}><b>4.7</b></div>
-          <div className={style.stars}>
-            <div className={style.emptyStars}></div>
-            <div className={style.fullStars}></div>
-          </div>
-            <div className={style.numberRatings}>
-              Ratings: 6328
+          <div className={style.score}>4.7</div>
+          <div className={style.totals}>
+            <div className={style.stars}>
+              <div className={style.emptyStars}></div>
+              <div className={style.fullStars}></div>
             </div>
-        </div>
-        <div className={style.ratings}>
-          <h2>RATING BREAKDOWN</h2> <br/>
-          <div className={style.showing}>
-            {one} {two} {three} {four} {five}
+            <div className={style.numberRatings}>
+                6328 Reviews  
+            </div>
           </div>
+        </div>
+
+
+
+        <div className={style.ratings}>
+          <div className={style.breakdown}>RATING BREAKDOWN</div>
+          {this.state.filter.length > 0 &&
+            <div className={style.showing}>
+              Showing reviews: <span className={style.bold}>
+               {one} {two} {three} {four} {five}
+              </span>
+              <div className={style.underline}>Remove all filters</div>
+            </div>
+          }
           <div className={style.barContainer} onClick={() => this.handleFilter('5 STARS')}>
-            <div>5 STARS</div>
+            <div className={style.underline}>5 STARS</div>
             <div className={style.bar}>
               <div className={style.meter5}></div>
             </div> 
             <div className={style.starTotals}>1238</div>
           </div>
           <div className={style.barContainer} onClick={() => this.handleFilter('4 STARS')}>
-            <div>4 STARS</div>
+            <div className={style.underline}>4 STARS</div>
             <div className={style.bar}>
               <div className={style.meter4}></div>
             </div>
             <div className={style.starTotals}>900</div>
           </div>
           <div className={style.barContainer} onClick={() => this.handleFilter('3 STARS')}>
-            <div>3 STARS</div>
+            <div className={style.underline}>3 STARS</div>
             <div className={style.bar}>
               <div className={style.meter3}></div>
             </div>
             <div className={style.starTotals}>450</div>
           </div>
           <div className={style.barContainer} onClick={() => this.handleFilter('2 STARS')}>
-            <div>2 STARS</div>
+            <div className={style.underline}>2 STARS</div>
             <div className={style.bar}>
               <div className={style.meter2}></div>
             </div>
             <div className={style.starTotals}>97</div>
           </div>
           <div className={style.barContainer} onClick={() => this.handleFilter('1 STARS')}>
-            <div>1 STARS</div>
+            <div className={style.underline}>1 STARS</div>
             <div className={style.bar}>
               <div className={style.meter1}></div>
             </div>
             <div className={style.starTotals}>45</div>
           </div>
         </div>
-          <div className={style.recommend}>
-            <h1>97%</h1>
-            of customers recommend this product
+          <div>
+            <div className={style.recommend}>97%</div>
+            <div className={style.text}>of customers recommend this product</div>
           </div>
+          <Fit />
       </div>
     )
   }
+}
+
+var Fit = (props) => {
+  return(
+    <div>
+      <div className={style.label}>SIZE</div>
+      <div className={style.fitBarContainer}>
+        <div className={style.triangleDown}></div>
+        <div className={style.fitBar}>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+        </div>
+      </div>
+      <div className={style.fitRatingsContainerThree}>
+        <div className={style.fitRatingsLeft}>TOO SMALL</div>
+        <div className={style.fitRatingsCenter}>PERFECT</div>
+        <div className={style.fitRatingsRight}>TOO LARGE</div>
+      </div>
+      <div className={style.label}>WIDTH</div>
+      <div className={style.fitBarContainer}>
+        <div className={style.triangleDown}></div>
+        <div className={style.fitBar}>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+        </div>
+      </div>
+      <div className={style.fitRatingsContainerThree}>
+        <div className={style.fitRatingsLeft}>TOO NARROW</div>
+        <div className={style.fitRatingsCenter}>PERFECT</div>
+        <div className={style.fitRatingsRight}>TOO WIDE</div>
+      </div>
+      <div className={style.label}>COMFORT</div>
+      <div className={style.fitBarContainer}>
+        <div className={style.triangleDown}></div>
+        <div className={style.fitBar}>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+        </div>
+      </div>
+      <div className={style.fitRatingsContainerTwo}>
+        <div className={style.fitRatingsLeft}>UNCOMFORTABLE</div>
+        <div className={style.fitRatingsRight}>COMFORTABLE</div>
+      </div>
+      <div className={style.label}>QUALITY</div>
+      <div className={style.fitBarContainer}>
+        <div className={style.triangleDown}></div>
+        <div className={style.fitBar}>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+          <div className={style.fitBarQuarters}></div>
+        </div>
+      </div>
+      <div className={style.fitRatingsContainerTwo}>
+        <div className={style.fitRatingsLeft}>POOR</div>
+        <div className={style.fitRatingsRight}>PERFECT</div>
+      </div>
+    </div>
+
+  )
 }
 
 export default Totals;

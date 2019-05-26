@@ -13,7 +13,7 @@ class ReviewEntry extends React.Component{
       <div className={style.review}>
         <div className={style.firstLine}>
           <div className={style.rating}><Rating rating={rating} /></div>
-          <div className={style.date}>{moment(date).format('MMMM d, YYYY')}</div>
+          <div className={style.date}>{moment(date).format('MMMM D, YYYY')}</div>
         </div>
         <div className={style.title}>
           {title}
@@ -21,9 +21,14 @@ class ReviewEntry extends React.Component{
         <div className={style.body}>
           {body} 
         </div>
-        <div className={style.recommend}>&#10003; I recommend this product</div>
-        <div className={style.user}>{userName} - Verified Purchaser</div>
-        <div className={style.helpful}>Was this review helpful? <span>Yes</span> ({helpful}) <span>No</span> ({notHelpful})</div>
+        {recommend === true &&
+          <div className={style.recommend}>&#10003; I recommend this product</div>
+        }
+        <span className={style.user}>{userName}</span>
+        {verified === true &&
+          <span className={style.verified}> - Verified Purchaser</span>  
+        }
+        <div className={style.helpful}>Was this review helpful? <span className={style.confirm}>Yes</span> ({helpful}) <span className={style.confirm}>No</span> ({notHelpful})</div>
       </div>
     )
   }

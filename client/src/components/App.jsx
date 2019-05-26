@@ -20,9 +20,12 @@ class App extends React.Component{
 
   render(){
     return(
-      <div className={style.container}>
-       <div className={style.totals}><Totals getFilters={this.getFilters} /></div>
-       <div className={style.reviews}><Reviews filters={this.state.filterBy}/></div>
+      <div>
+        <div><h3 className={style.title}>RATINGS & REVIEWS</h3></div> 
+        <div className={style.container}>
+        <div className={style.totals}><Totals getFilters={this.getFilters} /></div>
+        <div className={style.reviews}><Reviews filters={this.state.filterBy}/></div>
+        </div>
       </div>
     )
   }

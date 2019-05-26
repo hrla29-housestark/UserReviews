@@ -3,10 +3,6 @@
   border-bottom-width: 1px;
 }
 
-span{
-  text-decoration: underline;
-}
-
 .firstLine{
   display: grid;
   grid-template-columns: 50% 50%;
@@ -15,30 +11,50 @@ span{
 }
 
 .date{
+  font-size: 14px;
+  font-family: 'AdihauseDINRegular';
   text-align: right;
 }
 
 .title{
-  font-size: 18;
+  font-family: 'adineuePROBold';
+  font-size: 18px;
+  letter-spacing: 1px;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .body{
+  font-size: 16px;
   margin-bottom: 20px;
+  font-family: 'AdihauseDINRegular';
 }
 
 .recommend{
+  font-size: 14px;
+  font-family: 'AdihauseDINRegular';
   margin-bottom: 10px;
 }
 
 .user{
+  font-size: 14px;
+  font-family: 'AdihauseDINBold';
   margin-bottom: 14px;
 }
 
+.verified{
+  font-size: 14px;
+  font-family: 'AdihauseDINRegular';
+}
+
 .helpful{
+  font-size: 14px;
+  font-family: 'AdihauseDINRegular';
+  margin-top: 14px;
   margin-bottom: 40px;
 }
 
-.oneStar{
-  content: '&#9733;&#9734;&#9734;&#9734;&#9734;'
+.confirm{
+  text-decoration: underline;
+  cursor: pointer;
 }

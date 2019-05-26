@@ -6,6 +6,7 @@ const helpers = require('../database/helpers');
 const seedReviews = require('../seedReviews');
 
 const app = express();
+//CHANGE TO 3003
 const PORT = 3000;
 
 app.use(express.static(path.resolve(__dirname, '../client/dist')));

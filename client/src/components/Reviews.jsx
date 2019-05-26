@@ -12,11 +12,13 @@ class Reviews extends React.Component{
       list: [],
       filteredList: [],
       id: 6,
-      numberDisplayed: 2
+      numberDisplayed: 2,
+      hoverView: ''
     }
     this.changeView = this.changeView.bind(this);
     this.updateFilteredList = this.updateFilteredList.bind(this);
     this.updateNumberDisplayed = this.updateNumberDisplayed.bind(this);
+    this.toggleHover = this.toggleHover.bind(this);
   }
 
   componentDidMount(){
@@ -38,6 +40,12 @@ class Reviews extends React.Component{
     if (this.props.filters !== prevProps.filters) {
       this.updateFilteredList();
     }
+  }
+
+  toggleHover(option){
+    this.setState({
+      hoverView: option
+    })
   }
 
   updateFilteredList(){
@@ -84,25 +92,37 @@ class Reviews extends React.Component{
   }
  
   render(){
-    const { numberDisplayed, filteredList, view } = this.state;
+    const { numberDisplayed, filteredList, view, hoverView } = this.state;
     return(
       <div>
-        Sort On
+        <div className={style.sortOnText}>SORT ON</div>
         <div className={style.sortBox}>
           <div className={view === 'relevant'
           ? style.selected
+          : hoverView === 'relevant'
+          ? style.hover
           : style.unselected}
           onClick={() => this.changeView('relevant')}
+          onMouseEnter={() => this.toggleHover('relevant')}
+          onMouseLeave={() => this.toggleHover('')}
           >RELEVANT</div>
           <div className={view === 'helpful'
           ? style.selected
+          : hoverView === 'helpful'
+          ? style.hover
           : style.unselected}
           onClick={() => this.changeView('helpful')}
+          onMouseEnter={() => this.toggleHover('helpful')}
+          onMouseLeave={() => this.toggleHover('')}
           >HELPFUL</div>
           <div className={view === 'newest'
           ? style.selected
+          : hoverView === 'newest'
+          ? style.hover
           : style.unselected}
           onClick={() => this.changeView('newest')}
+          onMouseEnter={() => this.toggleHover('newest')}
+          onMouseLeave={() => this.toggleHover('')}
           >NEWEST</div>
         </div>
         <div>
@@ -111,7 +131,11 @@ class Reviews extends React.Component{
           })}
         </div>
         <div className={style.bottomContainer}>
-          <div className={style.loadMore} onClick={this.updateNumberDisplayed}>LOAD MORE</div> <div className={style.writeReview}>WRITE A REVIEW</div>
+          <div className={style.loadMore} onClick={this.updateNumberDisplayed}>LOAD MORE 
+            <div>
+            <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M17.59 7l5 5-5 5M0 12h22" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></path></svg>
+            </div>
+          </div> <div className={style.writeReview}>WRITE A REVIEW</div>
         </div>
       </div>
     )

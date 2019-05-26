@@ -14,7 +14,7 @@ var sentances = ['It was a gift.', 'I will be returning it.', 'LOVE LOVE LOVE LO
                   "I'm getting another one", 'This product was used. Disgusting.', 
                   'This is the worst thing I have ever bought.', 'Not true to size',
                 ];
-var titles = ['Love it', 'Hate it', 'Disappointed', 'Not true to fit', 'Happy with this purchase', 'Too big', 'Too small', 'Came used', 'Decent product', 'Bad quality', 'Great quality', `Only lasted ${randomizer(1, 10)} weeks`, `Will buy ${randomizer(1, 4)} more of these`, 'Excellent!!!!', 'Soooo happy', 'Adidas really let me down', 'Nice', 'Not perfect', 'Too expensive', 'I enjoy this product']
+var titles = ['Absolute bobby dazzlers','Love it', 'Hate it', 'Disappointed', 'Not true to fit', 'Happy with this purchase', 'Too big', 'Too small', 'Came used', 'Decent product', 'Bad quality', 'Great quality', `Only lasted ${randomizer(1, 10)} weeks`, `Will buy ${randomizer(1, 4)} more of these`, 'Excellent!!!!', 'Soooo happy', 'Adidas really let me down', 'Nice', 'Not perfect', 'Too expensive', 'I enjoy this product']
 
 var body = () => `I ${adj[randomizer(0, adj.length)]} ${verb[randomizer(0, verb.length)]} ${product[randomizer(0, product.length)]}. ${sentances[randomizer(0, sentances.length)]}`;
 

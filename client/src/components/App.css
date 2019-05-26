@@ -8,7 +8,7 @@
   grid-row: 1;
   padding: 40px;
   padding-left: 70px;
-  padding-right: 70px;
+  padding-right: 60px;
 }
 
 .reviews{
@@ -21,4 +21,35 @@
 h3{
   font-size: 36px;
   line-height: 32px;
+  padding-left: 70px;
+  font-family: 'adineuePROBold';
+  letter-spacing: 2px;
+}
+
+@font-face {
+  font-family: 'adineuePRORegular';
+  src: url('../assets/adineuePRO-Regular.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'adineuePROBold';
+  src: url('../assets/adineuePRO-Bold.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'AdihauseDINRegular';
+  src: url('../assets/AdihausDIN-Regular.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'AdihauseDINBold';
+  src: url('../assets/AdihausDIN-Bold.woff2') format('truetype');
+  font-style: normal;
+  font-weight: normal;
 }
