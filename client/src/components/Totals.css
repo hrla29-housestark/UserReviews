@@ -1,7 +1,7 @@
 .score{
   font-size: 56px;
   font-family: 'adineuePROBold';
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   vertical-align: middle;
   margin: auto;
   grid-row: 1 / span 2;
@@ -22,12 +22,11 @@
   white-space: nowrap;
   overflow: hidden;
   color: black;
-  width: 94%;
 }
 
 .emptyStars:before, .fullStars:before {
   content:"\2605\2605\2605\2605\2605";
-  font-size: 14pt;
+  font-size: 14px;
 }
 
 .emptyStars:before {
@@ -74,7 +73,7 @@
 
 .meter5{
   height: 4px;
-  width: 75%;
+  
   background-color: #2ada71;
 }
 .meter4{
@@ -99,7 +98,8 @@
 }
 
 .numberRatings{
-  font-size: 12px;
+  font-family: 'AdihauseDINBold';
+  font-size: 14px;
 }
 
 .starTotals{
@@ -110,6 +110,8 @@
 }
 
 .showing{
+  font-size: 16px;
+  font-family: 'AdihauseDINRegular';
   padding: 10px;
   margin: auto;
 }
@@ -119,7 +121,15 @@
   font-family: 'AdihauseDINBold';
   letter-spacing: 2px;
   text-decoration: underline;
+}
+
+
+.removeFilters{
+  font-size: 16px;
+  font-family: 'AdihauseDINRegular';
+  text-decoration: underline;
   text-align: center;
+  cursor: pointer;
 }
 
 .breakdown{
@@ -131,7 +141,8 @@
 }
 
 .bold{
-  font-weight: bold;
+  font-size: 16px;
+  font-family: 'AdihauseDINBold';
 }
 
 .totals{
@@ -172,7 +183,6 @@
 
 .triangleDown {
   position: relative;
-  left: 50%;
   transform: translate(-50%, 13px);
   width: 0px;
   height: 0px;

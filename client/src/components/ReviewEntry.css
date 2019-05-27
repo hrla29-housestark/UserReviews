@@ -11,6 +11,7 @@
 }
 
 .date{
+  color: grey;
   font-size: 14px;
   font-family: 'AdihauseDINRegular';
   text-align: right;
@@ -43,6 +44,7 @@
 }
 
 .verified{
+  color: grey;
   font-size: 14px;
   font-family: 'AdihauseDINRegular';
 }

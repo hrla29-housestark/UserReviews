@@ -3,20 +3,6 @@ const model = require('./schemas');
 const mongoose = require('mongoose');
 
 module.exports = {
-  findByNewest: (callback) => {
-    model.Review.find().sort({ timestamp: -1 })
-    .then(data => {
-      callback(null, data)
-    })
-    .catch(err => callback(err));
-  },
-  findByMostHelpful: (callback) => {
-    model.Review.find().sort({ helpful: -1 })
-    .then(data => {
-      callback(null, data)
-    })
-    .catch(err => callback(err));
-  },
   findByMostRelevant: (param, callback) => {
     model.Review.find(param)
     .then(data => {
@@ -24,13 +10,37 @@ module.exports = {
     })
     .catch(err => callback(err));
   },
-  insert: (data, callback) => {
+  insertReviews: (data, callback) => {
     model.Review.insertMany(data)
     .then(() => callback(null))
     .catch(err => callback(err))
   },
+  insertRatings: (data, callback) => {
+    model.Aggregate.insertMany(data)
+    .then(() => callback(null))
+    .catch(err => callback(err))
+  },
+  getRatings: (param, callback) => {
+    model.Aggregate.find(param)
+    .then(data => {
+      callback(null, data)
+    })
+    .catch(err => callback(err))
+  },
+  getAllRatings: (callback) => {
+    model.Aggregate.find()
+    .then(data => {
+      callback(null, data)
+    })
+    .catch(err => callback(err))
+  },
   deleteAll: (callback) => {
     model.Review.deleteMany()
+    .then(() => callback(null))
+    .catch(err => callback(err))
+  },
+  deleteRatings: (callback) => {
+    model.Aggregate.deleteMany()
     .then(() => callback(null))
     .catch(err => callback(err))
   }

@@ -9,6 +9,7 @@ class ReviewEntry extends React.Component{
 
   render(){
     const { body, helpful, notHelpful, rating, title, recommend, verified, userName, date } = this.props.review;
+    var grey = {color: 'grey'}
     return(
       <div className={style.review}>
         <div className={style.firstLine}>
@@ -28,7 +29,7 @@ class ReviewEntry extends React.Component{
         {verified === true &&
           <span className={style.verified}> - Verified Purchaser</span>  
         }
-        <div className={style.helpful}>Was this review helpful? <span className={style.confirm}>Yes</span> ({helpful}) <span className={style.confirm}>No</span> ({notHelpful})</div>
+        <div className={style.helpful}>Was this review helpful? <span className={style.confirm}>Yes</span> <span style={grey}>({helpful})</span> <span className={style.confirm}>No</span> <span style={grey}>({notHelpful})</span></div>
       </div>
     )
   }

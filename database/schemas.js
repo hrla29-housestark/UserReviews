@@ -13,7 +13,8 @@ let aggregateSchema = mongoose.Schema({
   size: Number,
   width: Number,
   comfort: Number,
-  quality: Number
+  quality: Number,
+  total: Number
 });
 
 let reviewSchema = mongoose.Schema({

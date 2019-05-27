@@ -11,7 +11,6 @@ class Reviews extends React.Component{
       view: 'relevant',
       list: [],
       filteredList: [],
-      id: 6,
       numberDisplayed: 2,
       hoverView: ''
     }
@@ -23,7 +22,7 @@ class Reviews extends React.Component{
 
   componentDidMount(){
     Axios
-    .get('/reviews', {params: {productId: this.state.id}})
+    .get('/reviews', {params: {productId: this.props.id}})
     .then(({ data }) => {
       data.sort((a, b) => {
         return b.rating - a.rating || b.relevant - a.relevant
@@ -93,6 +92,7 @@ class Reviews extends React.Component{
  
   render(){
     const { numberDisplayed, filteredList, view, hoverView } = this.state;
+    var grey = {color: 'grey', borderColor: 'black'};
     return(
       <div>
         <div className={style.sortOnText}>SORT ON</div>
@@ -131,11 +131,29 @@ class Reviews extends React.Component{
           })}
         </div>
         <div className={style.bottomContainer}>
-          <div className={style.loadMore} onClick={this.updateNumberDisplayed}>LOAD MORE 
-            <div>
-            <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M17.59 7l5 5-5 5M0 12h22" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></path></svg>
+          <div>
+            <div className={style.loadMore} 
+            style={hoverView === 'load' ? grey : null}
+            onClick={this.updateNumberDisplayed}
+            onMouseEnter={() => this.toggleHover('load')}
+            onMouseLeave={() => this.toggleHover('')}>LOAD MORE
+              <svg viewBox="0 0 24 24" width="100%" height="100%">
+                <path d="M17.59 7l5 5-5 5M0 12h22" fill="none" stroke="currentColor" strokeMiterlimit="10" strokeWidth="2">
+                </path>
+              </svg>
+            </div> 
+          </div>
+          <div className={style.writeReviewBackground}>
+            <div className={style.writeReview}
+            style={hoverView === 'write' ? grey : null}
+            onMouseEnter={() => this.toggleHover('write')}
+            onMouseLeave={() => this.toggleHover('')}>WRITE A REVIEW
+            <svg viewBox="0 0 24 24" width="100%" height="100%">
+                <path d="M17.59 7l5 5-5 5M0 12h22" fill="none" stroke="currentColor" strokeMiterlimit="10" strokeWidth="2">
+                </path>
+              </svg>
             </div>
-          </div> <div className={style.writeReview}>WRITE A REVIEW</div>
+          </div>
         </div>
       </div>
     )

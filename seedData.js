@@ -1,4 +1,4 @@
-const axios = require('axios');
+const helpers = require('./database/helpers')
 
 var randomizer = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
@@ -25,20 +25,31 @@ var seedData = (id) => {
     threeStars: threeStars,
     fourStars: fourStars,
     fiveStars: fiveStars,
-    average: average,
+    averageRating: average,
     recommended: recommended,
     size: size,
     width: width,
     comfort: comfort,
-    quality: quality 
+    quality: quality ,
+    total: totalReviews
   }
   return obj;
 }
 
 var runSeed = () => {
+  results = [];
   for(var i = 0; i < 100; i++){
-    console.log(seedData(i));
+    results.push(seedData(i));
   }
+  return results;
 }
 
-module.exports = seedData;
+var ratings = runSeed();
+
+helpers.insertRatings(ratings, (err) => {
+  if(err){
+    console.log('error in insertRatings')
+  } else{
+    console.log('successful insert')
+  }
+})

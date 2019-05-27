@@ -1,4 +1,5 @@
 const faker = require('faker');
+const helpers = require('./database/helpers')
 
 var randomizer = (min, max) => {
   return Math.floor(Math.random() * (max - min) ) + min;
@@ -44,4 +45,12 @@ var generateManyReviews = () => {
   return results;
 }
 
-module.exports = generateManyReviews;
+var reviews = generateManyReviews();
+
+helpers.insertReviews(reviews, (err) => {
+  if(err){
+    console.log('error in insertReviews')
+  } else{
+    console.log('successful insert')
+  }
+})
