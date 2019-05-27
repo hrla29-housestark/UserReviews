@@ -3,8 +3,8 @@ const path = require('path');
 const parser = require('body-parser');
 const router = require('./router');
 const helpers = require('../database/helpers');
-const seedReviews = require('../seedReviews');
-const seedRatings = require('../seedData')
+// const seedReviews = require('../database/seedReviews');
+// const seedRatings = require('../database/seedData')
 
 const app = express();
 //CHANGE TO 3003
@@ -16,16 +16,6 @@ app.use(parser.json());
 //app.use('/product', router);
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`))
-
-// app.get('/ratings', (req, res) => {
-//   helpers.getAllRatings((err, data) => {
-//     if(err){
-//       res.status.length(404).send(err)
-//     } else{
-//       res.status(200).send(data)
-//     }
-//   })
-// })
 
 app.get('/reviews', (req, res) => {
   helpers.findByMostRelevant(req.query, (err, data) => {

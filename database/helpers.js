@@ -11,12 +11,12 @@ module.exports = {
     .catch(err => callback(err));
   },
   insertReviews: (data, callback) => {
-    model.Review.insertMany(data)
+    model.Review.create(data)
     .then(() => callback(null))
     .catch(err => callback(err))
   },
   insertRatings: (data, callback) => {
-    model.Aggregate.insertMany(data)
+    model.Aggregate.create(data)
     .then(() => callback(null))
     .catch(err => callback(err))
   },
