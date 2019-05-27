@@ -44,12 +44,14 @@ var runSeed = () => {
   return results;
 }
 
-var ratings = runSeed();
+//var ratings = runSeed();
 
-helpers.insertRatings(ratings, (err) => {
-  if(err){
-    console.log('error in insertRatings')
-  } else{
-    console.log('successful insert')
-  }
-})
+module.exports = runSeed;
+
+// helpers.insertRatings(ratings, (err) => {
+//   if(err){
+//     console.log('error in insertRatings')
+//   } else{
+//     console.log('successful insert')
+//   }
+// })

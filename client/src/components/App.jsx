@@ -26,7 +26,7 @@ class App extends React.Component{
       .then(({ data }) => {
         this.setState({
           ratings: data
-        }, () => console.log(this.state.ratings))
+        }, () => console.log('in fetch ratings', this.state.ratings))
       })
       .catch(err => console.log('error in fetch ratings'))
   }

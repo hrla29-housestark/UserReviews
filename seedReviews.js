@@ -45,12 +45,14 @@ var generateManyReviews = () => {
   return results;
 }
 
-var reviews = generateManyReviews();
+//var reviews = generateManyReviews();
 
-helpers.insertReviews(reviews, (err) => {
-  if(err){
-    console.log('error in insertReviews')
-  } else{
-    console.log('successful insert')
-  }
-})
+module.exports = generateManyReviews;
+
+// helpers.insertReviews(reviews, (err) => {
+//   if(err){
+//     console.log('error in insertReviews')
+//   } else{
+//     console.log('successful insert')
+//   }
+// })

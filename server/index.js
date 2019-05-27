@@ -17,15 +17,15 @@ app.use(parser.json());
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`))
 
-app.get('/ratings', (req, res) => {
-  helpers.getAllRatings((err, data) => {
-    if(err){
-      res.status.length(404).send(err)
-    } else{
-      res.status(200).send(data)
-    }
-  })
-})
+// app.get('/ratings', (req, res) => {
+//   helpers.getAllRatings((err, data) => {
+//     if(err){
+//       res.status.length(404).send(err)
+//     } else{
+//       res.status(200).send(data)
+//     }
+//   })
+// })
 
 app.get('/reviews', (req, res) => {
   helpers.findByMostRelevant(req.query, (err, data) => {
