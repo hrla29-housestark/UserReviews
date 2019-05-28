@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/adidas', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/adidasrr', {useNewUrlParser: true});
 
 var db = mongoose.connection;
 
