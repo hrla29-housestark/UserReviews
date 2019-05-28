@@ -23,7 +23,12 @@ class ReviewEntry extends React.Component{
           {body} 
         </div>
         {recommend === true &&
-          <div className={style.recommend}>&#10003; I recommend this product</div>
+          <div className={style.recommend}>
+            <div className={style.check}>
+              <svg id="checkmark" viewBox="0 0 19 19" width="100%" height="100%"><path fill="none" stroke="currentColor" strokeLinecap="square" strokeMiterlimit="10" d="M2.5 10.5l4 4 10-10"></path></svg> 
+            </div>
+            <span>I recommend this product</span>
+          </div>
         }
         <span className={style.user}>{userName}</span>
         {verified === true &&

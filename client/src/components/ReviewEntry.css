@@ -32,6 +32,8 @@
 }
 
 .recommend{
+  display: grid;
+  grid-template-columns: 17px auto;
   font-size: 14px;
   font-family: 'AdihauseDINRegular';
   margin-bottom: 10px;
@@ -59,4 +61,10 @@
 .confirm{
   text-decoration: underline;
   cursor: pointer;
+}
+
+.check{
+  margin: auto;
+  height: 16px;
+  width: 16px;
 }

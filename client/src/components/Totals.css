@@ -58,8 +58,8 @@
 .barContainer{
   display: grid;
   grid-template-columns: auto auto auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   cursor: pointer;
 }
 
