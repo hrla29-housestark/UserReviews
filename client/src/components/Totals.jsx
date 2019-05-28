@@ -128,6 +128,7 @@ class Totals extends React.Component{
     var avg = {width: `${(averageRating*10)*2}%`};
     var black = {backgroundColor: 'black'};
     var white = {backgroundColor: 'black', color: 'white'};
+    
     return(
       <div>
         
