@@ -40,7 +40,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
-        <div><h3>RATINGS & REVIEWS</h3></div> 
+        <div className={style.header}><h3>RATINGS & REVIEWS</h3></div> 
         <div className={style.container}>
         {this.state.ratings.length !== 0 &&
           <div className={style.totals}><Totals ratings={this.state.ratings} getFilters={this.getFilters} /></div>
