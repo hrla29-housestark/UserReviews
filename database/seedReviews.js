@@ -38,7 +38,7 @@ var generateReview = (id) => {
 var generateManyReviews = () => {
   results = [];
   for(var i = 0; i < 100; i++){
-    for(var j = 0; j < randomizer(0, 30); j++){
+    for(var j = 0; j < randomizer(30, 50); j++){
       results.push(generateReview(i));
     }
   }

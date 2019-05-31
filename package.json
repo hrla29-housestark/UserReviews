@@ -12,15 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JenniferHaren/full-stack-mongo-review.git"
+    "url": "git+https://github.com/hrla29-housestark"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JenniferHaren/full-stack-mongo-review/issues"
-  },
-  "homepage": "https://github.com/JenniferHaren/full-stack-mongo-review#readme",
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
@@ -28,6 +24,9 @@
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.2",
+    "jest": "^24.8.0",
     "nodemon": "^1.19.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.31.0",
