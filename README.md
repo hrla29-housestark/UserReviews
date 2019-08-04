@@ -1,7 +1,7 @@
 # UserReviews
 Mock-up product reviews for Adidas website
 
-## Installation
+## Setup
 Have MongoDB installed
  
 ```
