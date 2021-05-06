@@ -42,7 +42,7 @@
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "underscore-query": "^3.3.2"
   }
 }
